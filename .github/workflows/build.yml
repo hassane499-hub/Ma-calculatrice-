@@ -1,0 +1,72 @@
+[app]
+
+# (str) Title of your application
+title = Calculatrice
+
+# (str) Package name (changez org.example if vous avez un nom de domaine)
+package.name = calculatrice
+package.domain = org.example
+
+# (str) Source main file
+source.include_exts = py,kv,png,jpg,txt
+
+# (str) Application versioning (changez si besoin)
+version = 1.0.0
+
+# (list) Application requirements
+# python3 is required; kivy will be pulled from p4a recipes
+requirements = python3,kivy
+
+# (str) Supported orientation: portrait, landscape or all
+orientation = portrait
+
+# (list) Permissions (aucune requise pour une calculatrice simple, laissez vide)
+# android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE
+
+# (str) Icon and presplash (décommentez et fournissez vos fichiers si vous en avez)
+# icon.filename = %(source.dir)s/icon.png
+# presplash.filename = %(source.dir)s/presplash.png
+
+# (int) Supported Android API level (target). 33 = Android 13 (stable pour la plupart des builds).
+android.api = 33
+
+# (int) Minimum API your APK will support
+android.minapi = 21
+
+# (str) Android NDK version to use (r25b recommandé par p4a)
+android.ndk = 25b
+# (int) Android NDK API (habituellement la même valeur que android.minapi)
+android.ndk_api = 21
+
+# (str) Android SDK version to use (laisser vide pour que buildozer choisisse)
+# android.sdk = 24
+
+# (str) python-for-android branch to use.
+# Si vous rencontrez des erreurs demandant AAB support, essayez p4a.branch = develop
+p4a.branch = master
+
+# (bool) Indique si buildozer doit packager en AAB au lieu d'APK (false par défaut)
+# android.aab = True
+
+# (str) Preset for newer buildozer versions: backend bootstrap
+# (laisser par défaut sauf si besoin d'un bootstrap particulier)
+# p4a.bootstrap = sdl2
+
+# (str) Application entry point (par défaut main.py). Si votre fichier s'appelle calculatrice.py,
+# renommez-le en main.py ou précisez ici:
+# (si vous laissez vide Buildozer cherchera main.py)
+# entrypoint = calculatrice.py
+
+# (str) Extra options: include all .py files in the source
+source.include_patterns = *.py,*.kv,assets/*
+
+# (int) Number of parallel processes used for compilation (optionnel)
+# buildozer.parallel = 4
+
+[buildozer]
+# (str) Path to buildozer cache dir (laisser par défaut)
+# build_dir = ./.buildozer
+
+[log]
+# (int) log level (0 = debug)
+log_level = 2
